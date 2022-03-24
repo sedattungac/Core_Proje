@@ -1,0 +1,75 @@
+﻿@using EntityLayer.Concrete
+@model List<Skill>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sira = 1;
+}
+
+<div class="card-header border-0">
+    <div>
+        <div class="float-left">
+            <h3 class="mb-0">Yeteneklerim</h3>
+
+        </div>
+        <div class="float-right">
+            <a href="/Skill/AddSkill" class="btn btn-warning btn-sm mb-0"> + Yetenek Ekle</a>
+
+        </div>
+    </div>
+   
+</div>
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col" class="sort" data-sort="name">#</th>
+                <th scope="col" class="sort" data-sort="budget">Başlık</th>
+                <th scope="col" class="sort" data-sort="completion">Oran</th>
+                <th scope="col" class="sort" data-sort="status">Sil</th>
+                <th scope="col" class="sort" data-sort="status">Düzenle</th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">
+                        <div class="media align-items-center">
+                            <div class="media-body">
+                                <span class="name mb-0 text-sm">@sira</span>
+                            </div>
+                        </div>
+                    </th>
+                    <td class="budget">
+                        @item.Title
+                    </td>
+
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <span class="completion mr-2">@item.Value%</span>
+                            <div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: @item.Value%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="avatar-group">
+                            <a href="/Skill/EditSkill/" class="btn btn-danger btn-sm text-white"><i class="ni ni-fat-remove"></i> Sil</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="avatar-group">
+                            <a href="/Skill/EditSkill/" class="btn btn-warning btn-sm text-white"><i class="ni ni-settings-gear-65" ></i> Düzenle </a>
+                        </div>
+                    </td>
+                </tr>
+                sira++;
+            }
+
+
+        </tbody>
+    </table>
+</div>
