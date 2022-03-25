@@ -1,0 +1,62 @@
+﻿@model EntityLayer.Concrete.About
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="card-header border-0">
+    <h3 class="mb-0">Hakkımda</h3>
+</div>
+<hr />
+<div class="row">
+    <div class="container-fluid col-12">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"> Başlık</label>
+                <input asp-for="Title" class="form-control text-dark" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"> Açıklama</label>
+                <textarea asp-for="Description" class="form-control text-dark" rows="5"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"> Yaş</label>
+                <input asp-for="Age" class="form-control text-dark" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mail" class="control-label"> Mail</label>
+                <input asp-for="Mail" class="form-control text-dark" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"> Telefon</label>
+                <input asp-for="Phone" class="form-control text-dark" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"> Adres</label>
+                <textarea asp-for="Address" class="form-control text-dark" rows="5"></textarea>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label">Resim</label>
+                <input asp-for="ImageUrl" class="form-control text-dark" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div>
+                <div class="form-group float-left">
+                    <a class="btn btn-primary btn-sm" asp-action="Index">Listeye Geri Gön</a>
+                </div>
+                <div class="form-group float-right">
+                    <input type="submit" value="Kaydet" class="btn btn-primary btn-sm" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

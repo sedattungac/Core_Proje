@@ -8,3 +8,19 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
 <!-- Argon JS -->
 <script src="~/argon-dashboard-master/assets/js/argon.js?v=1.2.0"></script>
+<script>
+    $('[data-toggle="popover-hover"]').popover({
+        html: true,
+        trigger: 'hover',
+        placement: 'bottom',
+        content: function () { return '<img width="100" src="' + $(this).data('img') + '" />'; }
+    });
+
+    // popovers initialization - on click
+    $('[data-toggle="popover-click"]').popover({
+        html: true,
+        trigger: 'click',
+        placement: 'bottom',
+        content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+    });
+</script>
