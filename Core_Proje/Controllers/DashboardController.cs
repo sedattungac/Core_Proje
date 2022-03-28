@@ -10,6 +10,9 @@ namespace Core_Proje.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.value = "Dashboard";
+            ViewBag.value2 = "İstatistikler";
+            ViewBag.value3 = "İstatistik Sayfası";
             return View();
         }
     }
