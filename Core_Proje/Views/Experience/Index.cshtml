@@ -5,11 +5,6 @@
     Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
     int sira = 1;
 }
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
-}
-
 <div class="col-lg-12 stretch-card">
     <div class="card">
 
@@ -17,7 +12,6 @@
             <div>
                 <h4 class="card-title float-left">Deneyim Listesi</h4>
                 <a href="/Experience/AddExperience" class="btn btn-outline-info float-right">+ Deneyim Ekle</a>
-
             </div>
 
             <div class="table-responsive mt-2">
@@ -46,7 +40,7 @@
                                     </div>
                                 </th>
                                 <td class="budget">
-                                  <a href="@item.ImageUrl" target="_blank"><img src="@item.ImageUrl" /></a>  
+                                    <a href="@item.ImageUrl" target="_blank"><img src="@item.ImageUrl" /></a>
                                 </td>
                                 <td class="budget">
                                     @item.Name
@@ -58,7 +52,7 @@
                                     @item.Date
                                 </td>
                                 <td>
-                                    
+
                                     <a class="btn btn-outline-primary btn-sm " data-toggle="description" data-title="@item.Description">Açıklama </a>
                                 </td>
                                 <td>

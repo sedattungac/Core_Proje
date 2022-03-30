@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "AddSkill";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 <div class="card-header border-0">
@@ -15,20 +15,20 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"> Başlık</label>
-                <input asp-for="Title" class="form-control text-dark" required/>
+                <input asp-for="Title" class="form-control text-white" required/>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Value" class="control-label"> Oran</label>
-                <input type="number" min="0" max="100" asp-for="Value" class="form-control text-dark" required/>
+                <input type="number" min="0" max="100" asp-for="Value" class="form-control text-white" required/>
                 <span asp-validation-for="Value" class="text-danger"></span>
             </div>
             <div>
                 <div class="form-group float-left">
-                    <a class="btn btn-primary btn-sm" asp-action="Index">Listeye Geri Gön</a>
+                    <a class="btn btn-outline-danger btn-sm" asp-action="Index">Listeye Geri Gön</a>
                 </div>
                 <div class="form-group float-right">
-                    <input type="submit" value="Kaydet" class="btn btn-primary btn-sm" />
+                    <input type="submit" value="Kaydet" class="btn btn-outline-primary btn-sm" />
                 </div>
             </div>
            
